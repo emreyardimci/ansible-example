@@ -2,7 +2,7 @@
   hosts: all
   tasks:
    - name: Echo emre
-     shell: echo "emre"
+     shell: echo '{"emre"}'
      register: shell_result
      become: true
    - debug: msg="{{ shell_result.stdout}}"
