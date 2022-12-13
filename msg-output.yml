@@ -2,6 +2,6 @@
   hosts: all
   tasks:
    - name: Echo emre
-     shell: echo '{"emre": "yardimci", "erdem": "yavuz"}'
+     shell: echo "{\"emre\": \"yardimci\", \"erdem\": \"yavuz\"}"
      register: shell_result
    - debug: msg="{{ shell_result.stdout}}"
