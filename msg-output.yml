@@ -2,7 +2,7 @@
   hosts: all
   tasks:
    - name: Echo emre
-     shell: echo '{"emre":"yardımcı","erdem":"yavuz"}'
+     shell: echo '{"final_result":"yardımcı","send_mail":"yavuz","parameters":"yavuz"}'
      register: shell_result
      become: true
    - debug: msg="{{ shell_result.stdout | from_json}}"
