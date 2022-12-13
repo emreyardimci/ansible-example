@@ -2,12 +2,32 @@
   hosts: all
   tasks:
    - name: Echo emre
-     shell: echo '{"final_result":"yardimci","send_mail":true,"parameters":"erdem.yavuz"}'
+     shell: echo '{"final_result":"yardimci","send_mail":true,"parameters":"emre.param"}'
      register: shell_result
      become: true
    - debug: msg="{{ shell_result.stdout | from_json}}"
-   - name: Echo emre
-     shell: echo '{"final_result":"yardimci","send_mail":true,"parameters":"erdem.yavuz"}'
+   - name: Echo erdem
+     shell: echo '{"final_result":"yavuz","send_mail":true,"parameters":"erdem.param"}'
+     register: shell_result
+     become: true
+   - debug: msg="{{ shell_result.stdout | from_json}}"
+   - name: Echo osman
+     shell: echo '{"final_result":"kayhan","send_mail":true,"parameters":"osman.param"}'
+     register: shell_result
+     become: true
+   - debug: msg="{{ shell_result.stdout | from_json}}"
+   - name: Echo mehmet
+     shell: echo '{"final_result":"girgin","send_mail":true,"parameters":"mehmet.param"}'
+     register: shell_result
+     become: true
+   - debug: msg="{{ shell_result.stdout | from_json}}"
+   - name: Echo altug
+     shell: echo '{"final_result":"yildirim","send_mail":true,"parameters":"altug.param"}'
+     register: shell_result
+     become: true
+   - debug: msg="{{ shell_result.stdout | from_json}}"
+   - name: Echo onur
+     shell: echo '{"final_result":"*ozbas","send_mail":true,"parameters":"onur.param"}'
      register: shell_result
      become: true
    - debug: msg="{{ shell_result.stdout | from_json}}"
