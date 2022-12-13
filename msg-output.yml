@@ -1,6 +1,7 @@
 - name: Hello World Sample
   hosts: all
   tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World!"
+   - name: Echo emre
+     shell: echo "emre"
+     register: shell_result
+   - debug: msg="{{ shell_result | from_json }}"
