@@ -4,4 +4,5 @@
    - name: Echo emre
      shell: hostname
      register: shell_result
+     become: true
    - debug: msg="{{ shell_result.stdout}}"
