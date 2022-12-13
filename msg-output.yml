@@ -4,4 +4,4 @@
    - name: Echo emre
      shell: echo "emre"
      register: shell_result
-   - debug: msg="{{ shell_result.stdout | from_json }}"
+   - debug: msg="{{ shell_result.stdout}}"
